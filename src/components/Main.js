@@ -21,8 +21,7 @@ const Main = () => {
                 let item = meme[Math.floor(Math.random()*meme.length)];
                 console.log(item);
                return(
-                setMyMemeUrl = (myMemeUrl= JSON.stringify(item.url)),
-                //myMemeUrl=(item.url)
+                setMyMemeUrl(JSON.stringify(item.url)),
                 console.log(myMemeUrl)
                )
                 
@@ -37,8 +36,8 @@ const Main = () => {
                 <button onClick={getMeme}>Get a new Meme Image</button>
             </div>
             <div className='content'>
-                <img onChange={(e) => setMyMemeUrl(item.url)}
-                alt='memeImg' id='meme-image'/>
+                <img src={myMemeUrl}
+                    alt='memeImg' id='meme-image'/>
             </div>
             <div className='download'>
                 <button id='download-button'>Download</button>
